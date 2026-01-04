@@ -1,5 +1,7 @@
 # Week 4: Coffee Shop Extension (Inheritance + Overriding)
 
+**Topic:** Inheritance & Polymorphism (Hillar Chapter 4).
+
 **Goal:** Extend the Week 2 project with inheritance and method overriding.
 
 ## Inheritance

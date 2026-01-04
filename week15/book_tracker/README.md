@@ -1,5 +1,7 @@
 # Week 15: Reading Log (Python OOP + Data Analysis)
 
+**Topic:** Introducing Data Science Chapters 6–9 overview.
+
 **Goal:** Small data-driven project combining Python, object-oriented programming, and data analysis.
 
 ## Features

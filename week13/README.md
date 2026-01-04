@@ -1,5 +1,7 @@
 # Week 13: Guided EDA Notebook
 
+**Topic:** Data science workflow & Python tooling (Igual & Seguí Chapters 1–3).
+
 **Goal:** Exploratory Data Analysis (EDA) and data visualization in a Jupyter Notebook.
 
 ## Files
