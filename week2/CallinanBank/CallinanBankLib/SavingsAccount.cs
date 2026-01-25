@@ -21,7 +21,10 @@ namespace CallinanBankLib
         {
             if (InterestRate <= 0) return;
 
-            Balance += Balance * InterestRate;
+            decimal interestAmount = Balance * InterestRate;
+            if (interestAmount <= 0) return;
+
+            Credit(interestAmount, $"Interest applied at {InterestRate:P}");
         }
 
 
