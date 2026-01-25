@@ -16,13 +16,7 @@ namespace CallinanBankLib
 
         public override bool Withdraw(decimal amount)
         {
-            if (amount <= 0m) return false;
-
-            // Allow overdraft up to the limit
-            if (Balance + OverdraftLimit < amount) return false;
-
-            Balance -= amount;
-            return true;
+            return WithdrawWithLimit(amount, OverdraftLimit);
         }
     }
 

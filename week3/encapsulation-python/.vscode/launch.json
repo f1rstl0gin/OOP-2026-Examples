@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run BankAccount",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/bank_account.py",
+      "console": "integratedTerminal"
+    }
+  ]
+}
