@@ -1,0 +1,25 @@
+## Visual Studio Temporary Files and Build Output
+bin/
+obj/
+.vs/
+
+## Visual Studio User Settings
+*.user
+*.userosscache
+*.sln.docstates
+
+## Common Build Artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+
+## NuGet Packages
+packages/
+*.nuget.props
+*.nuget.targets
+
+## OS Generated Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
