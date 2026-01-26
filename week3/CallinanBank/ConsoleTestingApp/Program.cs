@@ -13,7 +13,7 @@ Console.WriteLine();
 // ----------------------------------------
 Console.WriteLine("Base Account Test");
 
-Account acct = new Account(12345, "Alice Smith", AccountType.Savings);
+Account acct = new Account(12345, "Alice Smith", Account.AccountType.Savings);
 
 Console.WriteLine($"Initial Balance: {acct.Balance}");
 
