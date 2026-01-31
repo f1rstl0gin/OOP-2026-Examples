@@ -14,7 +14,11 @@ namespace CallinanBankLib
         // Primitive & common types
         public int AccountNumber { get; private set; }
         public string OwnerName { get; private set; }
-        public decimal Balance { get; protected set; }
+        private decimal _balance;
+        public decimal Balance
+        {
+            get { return _balance; }
+        }
         public bool IsActive { get; private set; }
 
         // Dates & enums
@@ -42,7 +46,7 @@ namespace CallinanBankLib
         {
             AccountNumber = 0;
             OwnerName = "Unknown";
-            Balance = 0.00m;
+            _balance = 0.00m;
             IsActive = false;
             DateOpened = DateTime.Now;
             Type = AccountType.Checking;
@@ -55,7 +59,7 @@ namespace CallinanBankLib
             AccountNumber = accountNumber;
             OwnerName = ownerName;
             Type = type;
-            Balance = 0.00m;
+            _balance = 0.00m;
             IsActive = true;
             DateOpened = DateTime.Now;
             transactionHistory = new List<string>();
@@ -75,26 +79,13 @@ namespace CallinanBankLib
                 return;
             }
 
-            Balance += amount;
-            transactionHistory.Add($"Deposited ${amount}");
+            Credit(amount, $"Deposited ${amount}");
         }
 
         // Method that returns a value
         public virtual bool Withdraw(decimal amount)
         {
-            if (!IsActive || amount <= 0)
-            {
-                return false;
-            }
-
-            if (Balance >= amount)
-            {
-                Balance -= amount;
-                transactionHistory.Add($"Withdrew ${amount}");
-                return true;
-            }
-
-            return false;
+            return WithdrawWithLimit(amount, 0m);
         }
 
         // Method with no parameters
@@ -119,13 +110,41 @@ namespace CallinanBankLib
         // Method returning a collection
         public List<string> GetTransactionHistory()
         {
-            return transactionHistory;
+            return new List<string>(transactionHistory);
         }
 
         // Method returning formatted string
         public override string ToString()
         {
             return $"Account #{AccountNumber} ({Type}) - Owner: {OwnerName}, Balance: ${Balance}";
+        }
+
+        protected void RecordTransaction(string message)
+        {
+            transactionHistory.Add(message);
+        }
+
+        protected void Credit(decimal amount, string message)
+        {
+            _balance += amount;
+            RecordTransaction(message);
+        }
+
+        protected bool WithdrawWithLimit(decimal amount, decimal overdraftLimit)
+        {
+            if (!IsActive || amount <= 0)
+            {
+                return false;
+            }
+
+            if (_balance + overdraftLimit < amount)
+            {
+                return false;
+            }
+
+            _balance -= amount;
+            RecordTransaction($"Withdrew ${amount}");
+            return true;
         }
     }
 
