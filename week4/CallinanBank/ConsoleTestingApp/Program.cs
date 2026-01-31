@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using CallinanBankLib;
+
+Console.WriteLine("========================================");
+Console.WriteLine("Callinan Bank Library Testing - START");
+Console.WriteLine($"Timestamp: {DateTime.Now:yyyy-MM-dd HH:mm:ss}");
+Console.WriteLine("========================================");
+Console.WriteLine();
+
+// ----------------------------------------
+// Inheritance & Polymorphism Test
+// ----------------------------------------
+Console.WriteLine("Inheritance & Polymorphism Test");
+
+List<BankAccount> accounts = new List<BankAccount>
+{
+    new TravelAccount(3001, "Avery", 250m, 12.50m),
+    new RewardsAccount(3002, "Jordan", 0.02m, 2, 1.50m),
+    new StudentAccount(3003, "Taylor", 0.01m, 100m)
+};
+
+foreach (BankAccount account in accounts)
+{
+    account.Deposit(500);
+    account.Withdraw(75);
+    account.ApplyMonthlyUpdate();
+    Console.WriteLine(account);
+}
+
+Console.WriteLine();
+
+// ----------------------------------------
+// Operator Overloading Example
+// ----------------------------------------
+Console.WriteLine("Operator Overloading Example");
+
+BankAccount travel = accounts[0];
+BankAccount rewards = accounts[1];
+
+decimal combinedBalance = travel + rewards;
+Console.WriteLine($"Combined balance (Travel + Rewards): ${combinedBalance}");
+Console.WriteLine("Use operator overloading sparingly—prefer clear methods for domain actions.");
+
+Console.WriteLine();
+
+// ----------------------------------------
+// End
+// ----------------------------------------
+Console.WriteLine("========================================");
+Console.WriteLine("Callinan Bank Library Testing - COMPLETE");
+Console.WriteLine($"Timestamp: {DateTime.Now:yyyy-MM-dd HH:mm:ss}");
+Console.WriteLine("========================================");
