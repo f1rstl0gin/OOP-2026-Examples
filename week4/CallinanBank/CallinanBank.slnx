@@ -1,4 +1,7 @@
 <Solution>
   <Project Path="CallinanBankLib/CallinanBankLib.csproj" />
+  <Project Path="CallinanBankLib.Tests/CallinanBankLib.Tests.csproj" />
   <Project Path="ConsoleTestingApp/ConsoleTestingApp.csproj" />
+  <Project Path="CallinanBankMaui/CallinanBankMaui.csproj" />
+  <Project Path="CallinanBankAtm/CallinanBankAtm.csproj" />
 </Solution>
