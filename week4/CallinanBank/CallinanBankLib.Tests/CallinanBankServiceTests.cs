@@ -14,9 +14,9 @@ public class CallinanBankServiceTests
 
         Assert.Equal("Savannah Harper", user.FullName);
         Assert.Equal(3, user.Accounts.Count);
-        Assert.Contains(user.Accounts, account => account.Type == BankAccount.AccountType.Travel);
-        Assert.Contains(user.Accounts, account => account.Type == BankAccount.AccountType.Rewards);
-        Assert.Contains(user.Accounts, account => account.Type == BankAccount.AccountType.Student);
+        Assert.Contains(user.Accounts, account => account.Type == Account.AccountType.Travel);
+        Assert.Contains(user.Accounts, account => account.Type == Account.AccountType.Rewards);
+        Assert.Contains(user.Accounts, account => account.Type == Account.AccountType.Student);
     }
 
     [Fact]

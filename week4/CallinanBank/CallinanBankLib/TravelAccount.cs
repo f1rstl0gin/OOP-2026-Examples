@@ -2,7 +2,7 @@ using System;
 
 namespace CallinanBankLib
 {
-    public class TravelAccount : BankAccount
+    public class TravelAccount : Account
     {
         public decimal OverdraftLimit { get; private set; }
         public decimal MonthlyFee { get; private set; }

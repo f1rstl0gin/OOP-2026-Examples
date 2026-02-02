@@ -37,7 +37,7 @@ namespace CallinanBankLib
             return user.ValidatePin(pin) ? user : null;
         }
 
-        public BankAccount CreateAccount(BankUser user, BankAccount.AccountType type)
+        public Account CreateAccount(BankUser user, Account.AccountType type)
         {
             if (user == null)
             {
@@ -45,11 +45,11 @@ namespace CallinanBankLib
             }
 
             var accountNumber = _nextAccountNumber++;
-            BankAccount account = type switch
+            Account account = type switch
             {
-                BankAccount.AccountType.Rewards => new RewardsAccount(accountNumber, user.FullName, 0.02m, 3, 2.50m),
-                BankAccount.AccountType.Student => new StudentAccount(accountNumber, user.FullName, 2.50m, 100m),
-                BankAccount.AccountType.Travel => new TravelAccount(accountNumber, user.FullName, 250m, 3.95m),
+                Account.AccountType.Rewards => new RewardsAccount(accountNumber, user.FullName, 0.02m, 3, 2.50m),
+                Account.AccountType.Student => new StudentAccount(accountNumber, user.FullName, 2.50m, 100m),
+                Account.AccountType.Travel => new TravelAccount(accountNumber, user.FullName, 250m, 3.95m),
                 _ => throw new ArgumentOutOfRangeException(nameof(type), type, "Unsupported account type.")
             };
 
@@ -59,9 +59,9 @@ namespace CallinanBankLib
 
         public void CreateStandardAccounts(BankUser user)
         {
-            CreateAccount(user, BankAccount.AccountType.Travel);
-            CreateAccount(user, BankAccount.AccountType.Rewards);
-            CreateAccount(user, BankAccount.AccountType.Student);
+            CreateAccount(user, Account.AccountType.Travel);
+            CreateAccount(user, Account.AccountType.Rewards);
+            CreateAccount(user, Account.AccountType.Student);
         }
     }
 }

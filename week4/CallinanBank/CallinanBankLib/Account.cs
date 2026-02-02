@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CallinanBankLib
 {
-    public class BankAccount
+    public class Account
     {
 
         // =========================
@@ -29,6 +29,8 @@ namespace CallinanBankLib
         // =========================
         public enum AccountType
         {
+            Savings,
+            Checking,
             Travel,
             Rewards,
             Student
@@ -43,7 +45,7 @@ namespace CallinanBankLib
         // =========================
 
         // Default constructor
-        public BankAccount()
+        public Account()
         {
             AccountNumber = 0;
             OwnerName = "Unknown";
@@ -55,7 +57,7 @@ namespace CallinanBankLib
         }
 
         // Constructor with parameters
-        public BankAccount(int accountNumber, string ownerName, AccountType type)
+        public Account(int accountNumber, string ownerName, AccountType type)
         {
             AccountNumber = accountNumber;
             OwnerName = ownerName;
@@ -118,7 +120,7 @@ namespace CallinanBankLib
             return $"Account #{AccountNumber} ({Type}) - Owner: {OwnerName}, Balance: ${Balance}";
         }
 
-        public static decimal operator +(BankAccount left, BankAccount right)
+        public static decimal operator +(Account left, Account right)
         {
             return left._balance + right._balance;
         }

@@ -1,7 +1,8 @@
 <Solution>
   <Project Path="CallinanBankLib/CallinanBankLib.csproj" />
+  <Project Path="CallinanBankATMWindowsForms/CallinanBankATMWindowsForms.csproj" Id="8e76ffb6-7c87-4205-bc23-5d1959d2789c" />
   <Project Path="CallinanBankLib.Tests/CallinanBankLib.Tests.csproj" />
   <Project Path="ConsoleTestingApp/ConsoleTestingApp.csproj" />
   <Project Path="CallinanBankMaui/CallinanBankMaui.csproj" />
-  <Project Path="CallinanBankAtm/CallinanBankAtm.csproj" />
+  <Project Path="CallinanBankAtm/CallinanBankAtm.csproj" DisplayName="CallinanBankATM" />
 </Solution>

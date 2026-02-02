@@ -13,14 +13,14 @@ Console.WriteLine();
 // ----------------------------------------
 Console.WriteLine("Inheritance & Polymorphism Test");
 
-List<BankAccount> accounts = new List<BankAccount>
+List<Account> accounts = new List<Account>
 {
     new TravelAccount(3001, "Avery", 250m, 12.50m),
     new RewardsAccount(3002, "Jordan", 0.02m, 2, 1.50m),
     new StudentAccount(3003, "Taylor", 0.01m, 100m)
 };
 
-foreach (BankAccount account in accounts)
+foreach (Account account in accounts)
 {
     account.Deposit(500);
     account.Withdraw(75);
@@ -35,8 +35,8 @@ Console.WriteLine();
 // ----------------------------------------
 Console.WriteLine("Operator Overloading Example");
 
-BankAccount travel = accounts[0];
-BankAccount rewards = accounts[1];
+Account travel = accounts[0];
+Account rewards = accounts[1];
 
 decimal combinedBalance = travel + rewards;
 Console.WriteLine($"Combined balance (Travel + Rewards): ${combinedBalance}");

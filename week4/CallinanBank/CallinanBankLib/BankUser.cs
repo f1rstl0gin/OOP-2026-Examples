@@ -6,7 +6,7 @@ namespace CallinanBankLib
     public class BankUser
     {
         private readonly string _pin;
-        private readonly List<BankAccount> _accounts;
+        private readonly List<Account> _accounts;
 
         public BankUser(string username, string fullName, string pin)
         {
@@ -23,20 +23,20 @@ namespace CallinanBankLib
             Username = username.Trim();
             FullName = string.IsNullOrWhiteSpace(fullName) ? "Callinan Customer" : fullName.Trim();
             _pin = pin.Trim();
-            _accounts = new List<BankAccount>();
+            _accounts = new List<Account>();
         }
 
         public string Username { get; }
         public string FullName { get; }
 
-        public IReadOnlyList<BankAccount> Accounts => _accounts.AsReadOnly();
+        public IReadOnlyList<Account> Accounts => _accounts.AsReadOnly();
 
         public bool ValidatePin(string pin)
         {
             return string.Equals(_pin, pin?.Trim(), StringComparison.Ordinal);
         }
 
-        public void AddAccount(BankAccount account)
+        public void AddAccount(Account account)
         {
             if (account == null)
             {
