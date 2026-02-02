@@ -1,6 +1,21 @@
 using System;
 using System.Collections.Generic;
 
+
+
+List<DocumentExporter> exporters = new()
+{
+    new PdfExporter(),
+    new CsvExporter(),
+    new HtmlExporter(),
+};
+
+foreach (DocumentExporter exporter in exporters)
+{
+    exporter.Export("Quarterly Report");
+}
+
+
 public abstract class DocumentExporter
 {
     public abstract void Export(string content);
@@ -30,14 +45,3 @@ public class HtmlExporter : DocumentExporter
     }
 }
 
-List<DocumentExporter> exporters = new()
-{
-    new PdfExporter(),
-    new CsvExporter(),
-    new HtmlExporter(),
-};
-
-foreach (DocumentExporter exporter in exporters)
-{
-    exporter.Export("Quarterly Report");
-}
