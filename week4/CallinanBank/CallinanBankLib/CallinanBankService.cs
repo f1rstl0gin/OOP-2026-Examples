@@ -48,7 +48,7 @@ namespace CallinanBankLib
             BankAccount account = type switch
             {
                 BankAccount.AccountType.Rewards => new RewardsAccount(accountNumber, user.FullName, 0.02m, 3, 2.50m),
-                BankAccount.AccountType.Student => new StudentAccount(accountNumber, user.FullName, 250m),
+                BankAccount.AccountType.Student => new StudentAccount(accountNumber, user.FullName, 2.50m, 100m),
                 BankAccount.AccountType.Travel => new TravelAccount(accountNumber, user.FullName, 250m, 3.95m),
                 _ => throw new ArgumentOutOfRangeException(nameof(type), type, "Unsupported account type.")
             };
