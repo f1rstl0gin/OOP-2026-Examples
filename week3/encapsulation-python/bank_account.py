@@ -4,7 +4,7 @@ class BankAccount:
             raise ValueError("starting_balance must be >= 0")
         self.owner = owner
         self._balance = starting_balance
-
+        
     @property
     def balance(self):
         return self._balance

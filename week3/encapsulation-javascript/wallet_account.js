@@ -66,6 +66,8 @@ function runTests() {
   }
 
   account.deposit(50);
+  account.balance = 100;
+  console.log(account.balance);
   if (account.balance !== 150) {
     throw new Error("Expected balance to be 150 after deposit");
   }

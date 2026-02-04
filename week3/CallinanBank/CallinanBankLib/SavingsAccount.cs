@@ -42,6 +42,11 @@ namespace CallinanBankLib
 
             return success;
         }
+        public override void Deposit(decimal amount)
+        {
+            if (amount <= 0) throw new Exception();
+            base.Deposit(amount);
+        }
     }
 
 }

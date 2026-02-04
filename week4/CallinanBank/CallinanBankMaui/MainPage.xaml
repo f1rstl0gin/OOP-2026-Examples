@@ -8,7 +8,7 @@
 
     <ScrollView>
         <VerticalStackLayout Spacing="20" Padding="24">
-            <Label Text="Welcome to Callinan Bank" FontSize="24" FontAttributes="Bold" />
+            <Label Text="Welcome to Callinan Bank" FontSize="18" FontAttributes="Bold" />
             <Label Text="Manage your profile and review your account types." FontSize="14" TextColor="#4B5563" />
 
             <Frame>
