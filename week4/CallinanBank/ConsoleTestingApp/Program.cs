@@ -51,3 +51,23 @@ Console.WriteLine("========================================");
 Console.WriteLine("Callinan Bank Library Testing - COMPLETE");
 Console.WriteLine($"Timestamp: {DateTime.Now:yyyy-MM-dd HH:mm:ss}");
 Console.WriteLine("========================================");
+
+
+// Smart Home Hub Test
+SmartLightBulb bulb = new SmartLightBulb("bulb001", "Living Room Bulb");
+SmartLightBulb bulb2 = new SmartLightBulb("bulb002", "Bedroom Bulb");
+SmartLightBulb bulb3 = new SmartLightBulb("bulb003", "Kitchen Bulb");   
+
+List<SmartDevice> devices = new List<SmartDevice>
+{
+    bulb,
+    bulb2,
+    bulb3
+};
+
+foreach (SmartDevice device in devices)
+{
+    device.TurnOn();
+    device.ApplyMode("Reading");
+    Console.WriteLine(device.GetStatus());
+}
