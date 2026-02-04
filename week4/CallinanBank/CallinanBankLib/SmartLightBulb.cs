@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CallinanBankLib
 {
-    internal class SmartLightBulb : SmartDevice
+    public class SmartLightBulb : SmartDevice
     {
         public SmartLightBulb(string deviceId, string name) : base(deviceId, name)
         {
