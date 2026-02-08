@@ -22,6 +22,18 @@ class Alien extends Enemy {
   }
 }
 
-const enemies = [new Zombie(), new Robot(), new Alien()];
+class Vampire extends Enemy {
+  attack() {
+    console.log("Vampire drinks your blood");
+  }
+}
+
+class Bowser extends Enemy {
+  attack() {
+    console.log("Bowser knocks down the bridge");
+  }
+}
+
+const enemies = [new Zombie(), new Robot(), new Alien(), new Vampire(), new Bowser()];
 
 enemies.forEach((enemy) => enemy.attack());
