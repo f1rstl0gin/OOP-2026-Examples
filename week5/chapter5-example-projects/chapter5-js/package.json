@@ -1,0 +1,11 @@
+{
+  "name": "chapter5-js-composition-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Chapter 5 concepts (JavaScript): composition with constructor functions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
