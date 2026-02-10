@@ -24,7 +24,7 @@ def main() -> None:
 
     print("\n=== Basic multiple inheritance (comic + game) ===")
     cat = AngryCat(nick_name="Garfield", age=10, full_name="Mr. Garfield", initial_score=0, x=10, y=20)
-    cat.draw(cat.x, cat.y)
+    cat.draw()
     cat.draw_speech_balloon(f"Hello, my name is {cat.nick_name}")
     cat.draw_thought_balloon("Where's my lasagna?")
 
@@ -56,8 +56,8 @@ def main() -> None:
         y=40,
         spell_power=9001,
     )
-    wizard_cat.draw(wizard_cat.x, wizard_cat.y)
-    wizard_cat.disappear_alien(alien_cat)
+    wizard_cat.draw()
+    wizard_cat.vanish(alien_cat)
     alien_cat.appear()
 
     print("\n=== Add a capability (Knight) that receives an Alien argument ===")
