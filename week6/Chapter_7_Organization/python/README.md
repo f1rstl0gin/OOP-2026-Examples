@@ -1,4 +1,4 @@
-# Chapter 7 (Python) — Organization of Object-Oriented Code (Modern)
+# Chapter 7 (Python) — Organization of Object-Oriented Code
 
 This mini-project demonstrates how to organize object-oriented Python code using:
 
