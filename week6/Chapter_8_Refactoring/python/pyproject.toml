@@ -1,0 +1,5 @@
+[project]
+name = "chapter8-python-refactoring"
+version = "0.1.0"
+requires-python = ">=3.9"
+description = "Chapter 8: Refactoring to OOP (after state only)."
