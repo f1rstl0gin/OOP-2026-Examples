@@ -16,6 +16,11 @@ namespace CallinanBankLib
 
         public override bool Withdraw(decimal amount)
         {
+            // bounds checking the amount
+            if (amount <= 0 || amount > Balance + OverdraftLimit)
+            {
+                throw new ArgumentOutOfRangeException("Withdrawal amount exceeds overdraft limit or is invalid.");
+            }
             return WithdrawWithLimit(amount, OverdraftLimit);
         }
     }

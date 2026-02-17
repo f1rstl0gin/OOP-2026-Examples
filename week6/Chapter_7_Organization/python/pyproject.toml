@@ -1,0 +1,5 @@
+[project]
+name = "chapter7-python-organization"
+version = "0.1.0"
+requires-python = ">=3.9"
+description = "Chapter 7: Organizing OOP code with packages and clean imports."

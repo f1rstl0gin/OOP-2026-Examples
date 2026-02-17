@@ -1,0 +1,15 @@
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\bin\Debug\net8.0\OopOrganization.Chapter7.exe
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\bin\Debug\net8.0\OopOrganization.Chapter7.deps.json
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\bin\Debug\net8.0\OopOrganization.Chapter7.runtimeconfig.json
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\bin\Debug\net8.0\OopOrganization.Chapter7.dll
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\bin\Debug\net8.0\OopOrganization.Chapter7.pdb
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\obj\Debug\net8.0\OopOrganization.Chapter7.GeneratedMSBuildEditorConfig.editorconfig
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\obj\Debug\net8.0\OopOrganization.Chapter7.AssemblyInfoInputs.cache
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\obj\Debug\net8.0\OopOrganization.Chapter7.AssemblyInfo.cs
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\obj\Debug\net8.0\OopOrganization.Chapter7.csproj.CoreCompileInputs.cache
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\obj\Debug\net8.0\OopOrganization.Chapter7.sourcelink.json
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\obj\Debug\net8.0\OopOrganization.Chapter7.dll
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\obj\Debug\net8.0\refint\OopOrganization.Chapter7.dll
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\obj\Debug\net8.0\OopOrganization.Chapter7.pdb
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\obj\Debug\net8.0\OopOrganization.Chapter7.genruntimeconfig.cache
+F:\Github\OOP-2026-Examples\week6\Chapter_7_Organization\csharp\src\OopOrganization.Chapter7\obj\Debug\net8.0\ref\OopOrganization.Chapter7.dll
